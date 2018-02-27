@@ -32,7 +32,7 @@ see also [serenity-js best practices](https://github.com/jan-molak/serenity-js/i
 
 ## Next Steps
 While Protractor works fine with Hadron and can even test devices (native) using [appium](http://appium.io/), it is optimized for Angular.
-By implementing our own extension/plugin that leverage Hadron's auto-utils/automation we can gain many of the same benefits.
+By implementing our own extension/plugin that leverages Hadron's auto-utils/automation we can gain many of the same benefits.
 
 #### Sample list of API concepts that would be mapped to corresponding autmation/auto-util methods
 * Open 
