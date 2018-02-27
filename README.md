@@ -100,26 +100,29 @@ Calling the above command should give you output similar to the one below, notif
 ```
 Feature: Add new items to the todo list
 
-  In order to avoid having to remember things that need doing
-  As a forgetful person
-  I want to be able to record what I need to do in a place where I won't forget about them
+    In order to avoid having to remember things that need doing
+    As a forgetful person
+    I want to be able to record what I need to do in a place where I won't forget about them
 
   Scenario: Adding an item to a list with other items
-    Given that James has a todo list containing Buy some cookies, Walk the dog
-    When he adds Buy some cereal to his list
-    Then his todo list should contain Buy some cookies, Walk the dog, Buy some cereal
+  ✔ Given that SportsEnthusiast has a todo list containing Buy some cookies, Walk the dog
+  ✔ When he adds Sign Up for HBO GO to his list
+  ✔ Then his todo list should contain Buy some cookies, Walk the dog, Sign Up for HBO GO
 
-Warnings:
+Feature: Check out the offerings HBO Sports provides
 
-1) Scenario: Adding an item to a list with other items - features/add_new_items.feature:7
-   Step: Given that James has a todo list containing Buy some cookies, Walk the dog - features/add_new_items.feature:8
-   Step Definition: features/step_definitions/todo_user.steps.ts:3
-   Message:
-     Pending
+    In order to find compelling sports content
+    As a sports enthusiast
+    I want to see what HBO has to offer
 
-1 scenario (1 pending)
-3 steps (1 pending, 2 skipped)
-0m00.002s
+  Scenario: Exploring HBO Sports
+  ✔ Given that SportsEnthusiast, a non-registered user, wants to explore Sports
+  ✔ When she scrolls alphabetically using R
+  ✔ Then she should see Real Sports
+
+2 scenarios (2 passed)
+6 steps (6 passed)
+0m10.956s
 ```
 
 note: protractor requires setting `127.0.0.1       localhost` in your local hosts file
