@@ -92,6 +92,7 @@ And make sure that you can execute the acceptance tests using
 - Robust execution and reporting using serenity-js
 ```
     $> npm run report
+    $> npm run open-report
 ```
 
 Calling the above command should give you output similar to the one below, notifying you of a pending step:
