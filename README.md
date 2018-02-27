@@ -57,6 +57,7 @@ $> cd serenity-bdd-demo
 Install the dependencies
 
 ```
+$> nvm use
 $> npm install
 ```
 
@@ -64,8 +65,14 @@ And make sure that you can execute the acceptance tests using
 [Protractor](https://github.com/angular/protractor) and
 [Cucumber](https://github.com/cucumber/cucumber-js):
 
+- Fast testing using protractor-cucumber-framework and headless chrome
 ```
-$> npm test
+    $> npm test
+```
+
+- Robust execution and reporting using serenity-js
+```
+    $> npm run report
 ```
 
 Calling the above command should give you output similar to the one below, notifying you of a pending step:
