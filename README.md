@@ -4,9 +4,30 @@
 -- John Ferguson Smart
 
 
-This project acts as supplementary material for
-the official [Serenity/JS](https://github.com/jan-molak/serenity-js) tutorial: 
+This project is a POC for incorporating BDD and current Best Practices being adopted by the automated test community.
+
+
+The material is based on the official [Serenity/JS](https://github.com/jan-molak/serenity-js) tutorial: 
 ["From Scripts to Serenity"](http://serenity-js.org/from-scripts-to-serenity/readme.html).
+
+
+**Serenity/JS is a next generation acceptance testing library, expanding the capabilities of 
+[Angular Protractor](https://github.com/angular/protractor) to give you:**
+* **the flexibility and expressiveness of the [Screenplay Pattern](http://serenity-js.org/design/screenplay-pattern.html)**,  
+  _so that your test scenarios stay free of noise and focused on the business logic_,
+* **the power and visibility of [Serenity BDD](http://serenity-bdd.info/#/documentation)
+[narrative reports](http://serenity-bdd.info/docs/serenity/#_detailed_description_of_aggregation_reports)**,  
+  _so that failure analysis and release readiness assessment become more efficient_,
+* **an easy way to introduce and follow [SOLID design principles](https://en.wikipedia.org/wiki/SOLID_&#40;object-oriented_design&#41;)**,  
+  _to keep your code simple, reusable and easy to extend_,
+* **effortless integration with popular test automation tools like [Cucumber](http://serenity-js.org/cucumber/readme.html), [Mocha](http://serenity-js.org/mocha/readme.html) and Chai**,  
+  _so that you can introduce it into your existing toolchain **today**,  
+  with just a single, [one-line code change](http://serenity-js.org/overview/retrofitting.html)_!
+
+Although Serenity/JS provides strong support for automating web tests using Protractor and Webdriver,
+it works very effectively for non-web tests too! Those include tests that exercise web services or even call application code directly.
+
+see also [serenity-js best practices](https://github.com/jan-molak/serenity-js/issues/5)
 
 ## Prerequisites
 
