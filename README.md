@@ -29,6 +29,16 @@ it works very effectively for non-web tests too! Those include tests that exerci
 
 see also [serenity-js best practices](https://github.com/jan-molak/serenity-js/issues/5)
 
+
+## Next Steps
+While Protractor works fine with Hadron and can even test devices (native) using [appium](http://appium.io/), it is optimized for Angular.
+By implementing our own extension/plugin that leverage Hadron's auto-utils/automation we can gain many of the same benefits.
+
+* Open 
+* Connect
+* Locators
+* etc.
+
 ## Prerequisites
 
 To follow the tutorial, you'll need:
