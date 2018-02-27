@@ -2,7 +2,6 @@
 import { Question, Target, Text } from 'serenity-js/lib/screenplay-protractor';
 
 import { by } from 'protractor';
-import {TodoList} from './todo_list';
 
 const MORE_XPATH = "//div[contains(@class, 'class4') and contains(@class, 'class12')]/div/span[.='More']";
 // Just to make the interaction more interesting

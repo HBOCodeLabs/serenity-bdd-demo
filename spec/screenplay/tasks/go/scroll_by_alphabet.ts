@@ -1,7 +1,7 @@
 import { PerformsTasks, step, Task } from 'serenity-js/lib/screenplay-protractor';     // imports the @step
 import { Click, Is, Wait } from 'serenity-js/lib/serenity-protractor';
 
-import { NavigationBar } from '../components/navigation_bar';
+import { NavigationBar } from '../../components/go/navigation_bar';
 
 export class ScrollByAlphabet implements Task {
     static of = (alphabet: string) => new ScrollByAlphabet(alphabet);

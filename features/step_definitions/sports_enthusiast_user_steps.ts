@@ -2,7 +2,7 @@ import {protractor} from 'protractor';
 import {serenity} from 'serenity-js';
 import {Actor, BrowseTheWeb} from 'serenity-js/lib/screenplay-protractor';
 import {expect} from '../../spec/expect';
-import {ContentArea} from '../../spec/screenplay/components/content_area';
+import {ContentArea} from '../../spec/screenplay/components/go/content_area';
 import {Exploration} from '../../spec/screenplay/tasks';
 import {ScrollByAlphabet} from '../../spec/screenplay/tasks';
 
