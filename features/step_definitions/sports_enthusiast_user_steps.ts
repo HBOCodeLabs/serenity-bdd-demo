@@ -30,5 +30,7 @@ export = function sportsEnthusiastUserSteps() {
 
     this.Then(/^she should see (.*)$/, function(content) {
         return expect(stage.theActorInTheSpotlight().toSee(ContentArea.Content_Displayed));
+        // Headless Chrome can't always find the `content` returns  ` ` instead.
+        //    .eventually.contain(content);
     });
 };
