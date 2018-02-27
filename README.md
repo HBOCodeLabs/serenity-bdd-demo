@@ -1,5 +1,9 @@
 # Serenity/JS - BDD Demo
 
+["High performing teams realise that test automation is a software engineering discipline. They invest time to design a test automation infrastructure that will be efficient and easy to maintain. "](https://johnfergusonsmart.com/wp-content/uploads/2017/07/bdd-at-the-heart-of-devops.pdf)
+-- John Ferguson Smart
+
+
 This project acts as supplementary material for
 the official [Serenity/JS](https://github.com/jan-molak/serenity-js) tutorial: 
 ["From Scripts to Serenity"](http://serenity-js.org/from-scripts-to-serenity/readme.html).
