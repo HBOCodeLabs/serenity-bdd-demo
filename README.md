@@ -64,6 +64,15 @@ $> git clone https://github.com/HBOCodeLabs/serenity-bdd-demo.git
 $> cd serenity-bdd-demo
 ```
 
+Since Executable Specifications are Living Documentation that are shared across teams you will need to import them: 
+
+To add them to your project issue the following git commands:
+`git subtree add --prefix features/hbo_go https://github.com/HBOCodeLabs/living-documentation.git master --squash`
+
+To update(choosing the appropriate version/branch/commit):
+`git subtree pull --prefix features/hbo_go https://github.com/HBOCodeLabs/living-documentation.git master --squash`
+
+
 Install the dependencies
 
 ```
