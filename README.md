@@ -1,4 +1,4 @@
-# Serenity/JS - Getting Started
+# Serenity/JS - BDD Demo
 
 This project acts as supplementary material for
 the official [Serenity/JS](https://github.com/jan-molak/serenity-js) tutorial: 
@@ -25,8 +25,8 @@ First, make sure that you have the [required tools](http://serenity-js.org/overv
 Next, [clone](https://help.github.com/articles/cloning-a-repository/) this project to your computer:
 
 ```
-$> git clone https://github.com/serenity-js/tutorial-from-scripts-to-serenity.git
-$> cd tutorial-from-scripts-to-serenity
+$> git clone https://github.com/HBOCodeLabs/serenity-bdd-demo.git
+$> cd serenity-bdd-demo
 ```
 
 Install the dependencies
@@ -76,13 +76,3 @@ on mac use `sudo nano /etc/hosts` to edit
 
 ## That's it!
 
-If you're done with the setup, [head back to the tutorial](http://serenity-js.org/from-scripts-to-serenity/readme.html).
-
-## Your feedback matters!
-
-Do you find [Serenity/JS](https://github.com/jan-molak/serenity-js) useful? Give it a star! &#9733;
-
-Found a bug? Need a feature? Raise [an issue](https://github.com/jan-molak/serenity-js/issues?state=open)
-or submit a pull request.
-
-Have feedback? Let me know on twitter: [@JanMolak](https://twitter.com/JanMolak)
