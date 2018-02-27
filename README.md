@@ -69,6 +69,11 @@ Warnings:
 3 steps (1 pending, 2 skipped)
 0m00.002s
 ```
+
+note: protractor requires setting `127.0.0.1       localhost` in your local hosts file
+
+on mac use `sudo nano /etc/hosts` to edit
+
 ## That's it!
 
 If you're done with the setup, [head back to the tutorial](http://serenity-js.org/from-scripts-to-serenity/readme.html).

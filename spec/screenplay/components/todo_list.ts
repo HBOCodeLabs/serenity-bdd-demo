@@ -1,4 +1,5 @@
-import { Target, Question, Text } from 'serenity-js/lib/screenplay-protractor';
+// noinspection ES6UnusedImports
+import { Question, Target, Text } from 'serenity-js/lib/screenplay-protractor';
 
 import { by } from 'protractor';
 
