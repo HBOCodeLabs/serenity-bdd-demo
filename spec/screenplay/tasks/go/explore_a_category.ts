@@ -3,8 +3,8 @@ import { Click, Is, Wait } from 'serenity-js/lib/serenity-protractor';
 
 import { NavigationBar } from '../../components/go/navigation_bar';
 
-export class Exploration implements Task {
-    static of = (category: string) => new Exploration(category);
+export class ExploreACategory implements Task {
+    static called = (category: string) => new ExploreACategory(category);
 
     @step('{0} explores #category')      // Gives the Task a more descriptive name
     performAs(actor: PerformsTasks): PromiseLike<void> {
