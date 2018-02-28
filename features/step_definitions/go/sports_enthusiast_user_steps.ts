@@ -16,7 +16,7 @@ export = function sportsEnthusiastUserSteps() {
         actor: name => Actor.named(name).whoCan(BrowseTheWeb.using(protractor.browser)),
     });
 
-    this.Given(/^.*that (.*), a non-registered user, wants to explore (.*)$/, function(name: string, category: string) {
+    this.Given(/^.*that (.*), an unregistered user, wants to explore (.*)$/, function(name: string, category: string) {
         return stage.theActorCalled(name).attemptsTo(
             ExploreACategory.called(category),
         );
@@ -28,7 +28,7 @@ export = function sportsEnthusiastUserSteps() {
         );
     });
 
-    this.Then(/^she should see (.*)$/, function(content) {
+    this.Then(/^s?he should see (.*)$/, function(content) {
         return expect(stage.theActorInTheSpotlight().toSee(ContentArea.Content_Displayed));
         // Headless Chrome can't always find the `content` returns  ` ` instead.
         //    .eventually.contain(content);

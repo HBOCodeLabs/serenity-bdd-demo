@@ -27,7 +27,8 @@ exports.config = {
     cucumberOpts: {
         require:    [ 'features/**/*.ts' ],
         format:     'pretty',
-        compiler:   'ts:ts-node/register'
+        compiler:   'ts:ts-node/register',
+        //tags:       [ '~@manual' ]
     },
 
     capabilities: {

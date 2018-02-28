@@ -6,7 +6,7 @@ Feature: Check out the offerings HBO Sports provides
 
   Scenario: Exploring HBO Sports
 
-    Given that SportsEnthusiast, a non-registered user, wants to explore Sports
-    When she scrolls alphabetically using R
-    Then she should see Real Sports
-    And she should not see NFL
+    Given that SportsEnthusiast, an unregistered user, wants to explore Sports
+     When she scrolls alphabetically using R
+     Then she should see Real Sports
+     And she should not see NFL
