@@ -4,7 +4,7 @@ Feature: Demonstrate specifying manual tests
   As a tester
   I want to have clear visibility which tests are automated and which are still manual
 
-  @manual @ignore
+  @manual
   Scenario: Load the Foo component in the Bar page.
 
     Given a tester
