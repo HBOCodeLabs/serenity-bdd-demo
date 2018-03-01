@@ -1,3 +1,4 @@
+# This Feature is too narrowly focused and can be generalized
 Feature: Check out the offerings HBO Sports provides
 
   In order to find compelling sports content
