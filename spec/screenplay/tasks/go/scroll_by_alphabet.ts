@@ -10,7 +10,7 @@ export class ScrollByAlphabet implements Task {
     performAs(actor: PerformsTasks): PromiseLike<void> {
         return actor.attemptsTo(
 
-            // Scroll down to Real Sports
+            // Scroll to content beginning with alphabet
             Wait.until(NavigationBar.Alphabet.of(this.alphabet), Is.clickable()),
             Click.on(NavigationBar.Alphabet.of(this.alphabet)),
         );

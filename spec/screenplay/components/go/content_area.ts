@@ -7,7 +7,14 @@ const CONTENT_XPATH = "(//a[contains(@class, 'class2') and contains(@class, 'cla
 
 // TODO:  Provide autoUtils/Automation version of "by" locators
 export class ContentArea {
-    // TODO: Migrate from static content locator predicate to dynamic predicate
-    static Content           = Target.the('content containing "{0}"').located(by.xpath(CONTENT_XPATH + '[starts-with(.,"Real Sports")])[1]'));
-    static Content_Displayed = Text.of(ContentArea.Content);
+    alphabet: string;
+
+    constructor(alphabet: string) {
+        this.alphabet = alphabet;
+    }
+
+    getContentDisplayed() {
+        const content = Target.the('content containing "{0}"').located(by.xpath(CONTENT_XPATH + '[starts-with(.,"' + this.alphabet + '")])[1]'));
+        return Text.of(content);
+    }
 }

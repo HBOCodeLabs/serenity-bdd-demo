@@ -28,9 +28,10 @@ export = function sportsEnthusiastUserSteps() {
         );
     });
 
-    this.Then(/^s?he should see (.*)$/, function(content) {
-        return expect(stage.theActorInTheSpotlight().toSee(ContentArea.Content_Displayed))
-            // Headless Chrome can't always find the `content` returns  ` ` instead.
-            ; // .eventually.contain(content);
+    this.Then(/^s?he should see content that starts with (.*)$/, function(alphabet: string) {
+        const content = new ContentArea(alphabet);
+        return expect(stage.theActorInTheSpotlight().toSee(content.getContentDisplayed()))
+            // Headless Chrome can't always find the `content` and returns  ` ` instead.
+            ; // .eventually.contain(content.alphabet);
     });
 };
