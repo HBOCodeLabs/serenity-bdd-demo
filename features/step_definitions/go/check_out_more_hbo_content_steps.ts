@@ -29,8 +29,9 @@ export = function checkOutMoreHBOContentSteps() {
     });
 
     this.Then(/^s?he should see content that starts with (.*)$/, function(alphabet: string) {
-        const regex = new RegExp('^(' + alphabet + '|The ' + alphabet + ')');  // Starts-with
-        return expect(stage.theActorInTheSpotlight().toSee(ContentArea.displayedContentThatStartsWith(alphabet)))
+        const content = new ContentArea(alphabet);
+        const regex = new RegExp('^' + alphabet);  // Starts-with
+        return expect(stage.theActorInTheSpotlight().toSee(content.displayedContentThatStartsWithAlpha()))
             .eventually.match(regex);
     });
 };
