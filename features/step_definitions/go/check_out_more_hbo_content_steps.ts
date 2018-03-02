@@ -7,7 +7,7 @@ import {ExploreACategory} from '../../../spec/screenplay/tasks/';
 import {ScrollByAlphabet} from '../../../spec/screenplay/tasks/';
 
 // TODO:  generalize this feature test to work with any category using Scenerio Outlines/Examples
-export = function sportsEnthusiastUserSteps() {
+export = function checkOutMoreHBOContentSteps() {
 
     this.setDefaultTimeout(30 * 1000);  // The todomvc.com website can sometimes be a bit slow to load, so we tell
                                         // Cucumber to give it up to 30 seconds to get ready.
@@ -29,9 +29,8 @@ export = function sportsEnthusiastUserSteps() {
     });
 
     this.Then(/^s?he should see content that starts with (.*)$/, function(alphabet: string) {
-        const content = new ContentArea(alphabet);
-        const regex = new RegExp('^' + alphabet);  // Starts-with
-        return expect(stage.theActorInTheSpotlight().toSee(content.displayedContent()))
+        const regex = new RegExp('^(' + alphabet + '|The ' + alphabet + ')');  // Starts-with
+        return expect(stage.theActorInTheSpotlight().toSee(ContentArea.displayedContentThatStartsWith(alphabet)))
             .eventually.match(regex);
     });
 };
