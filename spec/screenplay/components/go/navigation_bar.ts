@@ -7,7 +7,7 @@ const MORE_XPATH = "//div[contains(@class, 'class4') and contains(@class, 'class
 // Just to make the interaction more interesting
 const R_XPATH = "//div[contains(@class, 'class2') and contains(@class, 'class4')]/span/span";
 
-// TODO:  Provide autoUtils/Automation versversion of "by" locators
+// TODO:  Provide autoUtils/Automation version of "by" locators
 export class NavigationBar {
     static Category = Target.the('Link to "{0}"').located(by.linkText('{0}'));
     static More_Categories = Target.the('More Categories').located(by.xpath(MORE_XPATH));

@@ -22,7 +22,7 @@ export = function sportsEnthusiastUserSteps() {
         );
     });
 
-    this.When(/^s?he scrolls alphabetically using (.*)$/, function(alphabet: string) {
+    this.When(/^s?he looks for content starting with (.*)$/, function(alphabet: string) {
         return stage.theActorInTheSpotlight().attemptsTo(
             ScrollByAlphabet.of(alphabet),
         );
@@ -30,8 +30,8 @@ export = function sportsEnthusiastUserSteps() {
 
     this.Then(/^s?he should see content that starts with (.*)$/, function(alphabet: string) {
         const content = new ContentArea(alphabet);
+        const regex = new RegExp('^' + alphabet);  // Starts-with
         return expect(stage.theActorInTheSpotlight().toSee(content.getContentDisplayed()))
-            // Headless Chrome can't always find the `content` and returns  ` ` instead.
-            ; // .eventually.contain(content.alphabet);
+            .eventually.match(regex);
     });
 };

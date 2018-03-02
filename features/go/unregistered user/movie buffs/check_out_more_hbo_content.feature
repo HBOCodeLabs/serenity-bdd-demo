@@ -11,7 +11,7 @@ Feature: Check out the offerings HBO provides
     # gherkins are not meant to explore exhaustive edge cases
     # Nor are then meant to read like tests
     Given that <cinephile>, an unregistered user, wants to explore <category>
-     When she scrolls alphabetically using <alpha>
+     When she looks for content starting with <alpha>
      Then she should see content that starts with <alpha>
 
     Examples:

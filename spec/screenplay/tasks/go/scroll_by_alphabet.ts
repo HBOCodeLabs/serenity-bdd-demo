@@ -6,10 +6,9 @@ import { NavigationBar } from '../../components/go/navigation_bar';
 export class ScrollByAlphabet implements Task {
     static of = (alphabet: string) => new ScrollByAlphabet(alphabet);
 
-    @step('{0} scrolls by #alphabet')      // Gives the Task a more descriptive name
+    @step('{0} finds the #alphabet navigation link')      // Gives the Task a more descriptive name
     performAs(actor: PerformsTasks): PromiseLike<void> {
         return actor.attemptsTo(
-
             // Scroll to content beginning with alphabet
             Wait.until(NavigationBar.Alphabet.of(this.alphabet), Is.clickable()),
             Click.on(NavigationBar.Alphabet.of(this.alphabet)),

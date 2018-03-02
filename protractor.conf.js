@@ -1,4 +1,5 @@
 const
+    crew         = require('serenity-js/lib/stage_crew'),
     glob         = require('glob'),
     protractor   = require.resolve('protractor'),
     node_modules = protractor.substring(0, protractor.lastIndexOf('node_modules') + 'node_modules'.length),
@@ -29,6 +30,12 @@ exports.config = {
         format:     'pretty',
         compiler:   'ts:ts-node/register',
         //tags:       [ '~@manual' ]
+    },
+
+    serenity: {
+        crew:    [
+            crew.consoleReporter(),
+        ]
     },
 
     capabilities: {
