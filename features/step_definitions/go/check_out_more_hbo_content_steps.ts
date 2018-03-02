@@ -31,7 +31,7 @@ export = function sportsEnthusiastUserSteps() {
     this.Then(/^s?he should see content that starts with (.*)$/, function(alphabet: string) {
         const content = new ContentArea(alphabet);
         const regex = new RegExp('^' + alphabet);  // Starts-with
-        return expect(stage.theActorInTheSpotlight().toSee(content.getContentDisplayed()))
+        return expect(stage.theActorInTheSpotlight().toSee(content.displayedContent()))
             .eventually.match(regex);
     });
 };

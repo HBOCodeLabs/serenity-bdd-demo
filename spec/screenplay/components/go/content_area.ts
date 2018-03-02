@@ -1,5 +1,5 @@
 // noinspection ES6UnusedImports
-import { Question, Target, Text } from 'serenity-js/lib/screenplay-protractor';
+import {Question, Target, Text} from 'serenity-js/lib/screenplay-protractor';
 
 import { by } from 'protractor';
 
@@ -15,7 +15,7 @@ export class ContentArea {
         this.alphabet = alphabet;
     }
 
-    getContentDisplayed() {
+    displayedContent() {
         const content = Target.the('content containing "{0}"').located(by.xpath(CONTENT_XPATH + '[starts-with(.,"' + this.alphabet + '")])[1]'));
         return Text.of(content);
     }
