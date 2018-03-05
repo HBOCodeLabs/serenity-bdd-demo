@@ -30,7 +30,7 @@ export = function checkOutMoreHBOContentSteps() {
 
     this.Then(/^s?he should see content that starts with (.*)$/, function(alphabet: string) {
         const content = new ContentArea(alphabet);
-        const regex = new RegExp('^' + alphabet);  // Starts-with
+        const regex = new RegExp('^(' + alphabet + '|The ' + alphabet + ')');  // Starts-with
         return expect(stage.theActorInTheSpotlight().toSee(content.displayedContentThatStartsWithAlpha()))
             .eventually.match(regex);
     });

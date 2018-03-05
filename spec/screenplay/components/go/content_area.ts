@@ -16,7 +16,7 @@ export class ContentArea {
     }
 
     displayedContentThatStartsWithAlpha() {
-        const content = Target.the('content containing "{0}"').located(by.xpath(CONTENT_XPATH + '[starts-with(.,"' + this.alphabet + '")])[1]'));
+        const content = Target.the('content starting with "{0}"').located(by.xpath(CONTENT_XPATH + '[starts-with(.,"' + this.alphabet + '")])[1]'));
         return Text.of(content);
     }
 }

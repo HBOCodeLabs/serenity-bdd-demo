@@ -1,5 +1,5 @@
 import { PerformsTasks, step, Task } from 'serenity-js/lib/screenplay-protractor';     // imports the @step
-import { Click, Is, Wait } from 'serenity-js/lib/serenity-protractor';
+import { Click, Is, Scroll, Wait } from 'serenity-js/lib/serenity-protractor';
 
 import { NavigationBar } from '../../components/go/navigation_bar';
 
@@ -10,7 +10,8 @@ export class ScrollByAlphabet implements Task {
     performAs(actor: PerformsTasks): PromiseLike<void> {
         return actor.attemptsTo(
             // Scroll to content beginning with alphabet
-            Wait.until(NavigationBar.Alphabet.of(this.alphabet), Is.clickable()),
+            Wait.until(NavigationBar.Alphabet.of(this.alphabet), Is.present()),
+            Scroll.to(NavigationBar.Alphabet.of(this.alphabet)),
             Click.on(NavigationBar.Alphabet.of(this.alphabet)),
         );
     }
