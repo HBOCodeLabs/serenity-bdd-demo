@@ -21,7 +21,7 @@ export class ExploreACategory implements Task {
             Wait.until(NavigationBar.More_Categories, Is.clickable()),
             Click.on(NavigationBar.More_Categories),
 
-            // Wait.until(NavigationBar.Category.of(this.category), Is.clickable()),
+            Wait.until(NavigationBar.Category.of(this.category), Is.clickable()),
             Click.on(NavigationBar.Category.of(this.category)),
         );
     }
