@@ -126,6 +126,31 @@ Feature: Check out the offerings HBO Sports provides
 0m10.956s
 ```
 
+Protractor supports sharding, headless chrome allows us to run tests in the cloud on large multi-cpu images:
+```
+    capabilities: {
+        browserName: 'chrome',
+        // allows different specs to run in parallel.
+        // If this is set to be true, specs will be sharded by file
+        // (i.e. all files to be run by this set of capabilities will run in parallel).
+        // Default is false.
+        shardTestFiles: true,
+
+        // Maximum number of browser instances that can run in parallel for this
+        // set of capabilities. This is only needed if shardTestFiles is true.
+        // Default is 1.
+        maxInstances: 2,
+        chromeOptions: {
+            args: [
+                'disable-infobars',
+                '--headless',
+                '--window-size=1920,1080',
+            ]
+        }
+    }
+```
+
+
 note: protractor requires setting `127.0.0.1       localhost` in your local hosts file
 
 on mac use `sudo nano /etc/hosts` to edit
