@@ -1,4 +1,4 @@
-#Key Features
+# Key Features
 **Serenity/JS is a next generation acceptance testing library**
 
 *   **the flexibility and expressiveness of the [Screenplay Pattern](design/screenplay-pattern.html)**,  
