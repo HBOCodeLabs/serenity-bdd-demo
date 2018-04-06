@@ -31,6 +31,7 @@ export = function checkOutMoreHBOContentSteps() {
     this.Then(/^s?he should see content that starts with (.*)$/, function(alphabet: string) {
         const content = new ContentArea(alphabet);
         const regex = new RegExp('^(' + alphabet + '|The ' + alphabet + ')');  // Starts-with
+        // The actor asks to see the content that starts with the provided alphabet (asks a question)
         return expect(stage.theActorInTheSpotlight().toSee(content.displayedContentThatStartsWithAlpha()))
             .eventually.match(regex);
     });

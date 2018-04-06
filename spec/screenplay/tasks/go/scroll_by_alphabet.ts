@@ -11,6 +11,7 @@ export class ScrollByAlphabet implements Task {
         return actor.attemptsTo(
             // Scroll to content beginning with alphabet
             Wait.until(NavigationBar.Alphabet.of(this.alphabet), Is.present()),
+            // Interactions
             Scroll.to(NavigationBar.Alphabet.of(this.alphabet)),
             Click.on(NavigationBar.Alphabet.of(this.alphabet)),
         );

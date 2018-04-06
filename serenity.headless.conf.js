@@ -52,8 +52,8 @@ exports.config = {
                 // 'incognito',
                 // 'disable-extensions',
                 // 'show-fps-counter=true'
-                // '--headless',            // Don't use headless for serenity, increases runtime for some reason
-                // '--window-size=1920,1080',
+                '--headless',            // Don't use headless for serenity, increases runtime for some reason
+                '--window-size=1920,1080',
                 //'--disable-gpu',
                 // Without a remote debugging port, Google Chrome exits immediately.
                 //'--remote-debugging-port=9222',
