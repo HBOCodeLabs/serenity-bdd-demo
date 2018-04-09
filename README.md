@@ -15,6 +15,7 @@ The material is based on the official [Serenity/JS](https://github.com/jan-molak
 [Angular Protractor](https://github.com/angular/protractor) to give you:**
 * **the flexibility and expressiveness of the [Screenplay Pattern](http://serenity-js.org/design/screenplay-pattern.html)**,  
   _so that your test scenarios stay free of noise and focused on the business logic_,
+  ![Screenplay Pattern Model](./documentation/screenplay_pattern_model.png)
 * **the power and visibility of [Serenity BDD](http://serenity-bdd.info/#/documentation)
 [narrative reports](http://serenity-bdd.info/docs/serenity/#_detailed_description_of_aggregation_reports)**,  
   _so that failure analysis and release readiness assessment become more efficient_,

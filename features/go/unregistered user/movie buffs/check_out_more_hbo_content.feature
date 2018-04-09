@@ -1,5 +1,5 @@
 # This Feature is too narrowly focused and can be generalized
-@all @mobile @desktop
+@brand_all @mobile @desktop
 Feature: Check out the offerings HBO provides
 
   In order to find compelling content
