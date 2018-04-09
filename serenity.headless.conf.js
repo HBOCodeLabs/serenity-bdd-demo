@@ -1,5 +1,4 @@
 const
-    crew         = require('serenity-js/lib/stage_crew'),
     glob         = require('glob'),
     protractor   = require.resolve('protractor'),
     node_modules = protractor.substring(0, protractor.lastIndexOf('node_modules') + 'node_modules'.length);
@@ -21,8 +20,10 @@ exports.config = {
     ignoreUncaughtExceptions: true,
 
     framework: 'custom',
-    // Performance note:  Protractor is faster but more error-prone compared to Serenity
-    frameworkPath: require.resolve('protractor-cucumber-framework'),
+    // Performance note Serenity test framework provides a number of enhancements over cucumber-protractor-framework
+    // The benefits incur a necessary performance penalty
+    // see https://github.com/jan-molak/serenity-js/blob/master/book/overview/retrofitting.md
+    frameworkPath: require.resolve('serenity-js'),
 
     specs: [ 'features/**/*.feature' ],
 
@@ -31,12 +32,6 @@ exports.config = {
         format:     'pretty',
         compiler:   'ts:ts-node/register',
         //tags:       [ '~@manual' ]
-    },
-
-    serenity: {
-        crew:    [
-            crew.consoleReporter(),
-        ]
     },
 
     capabilities: {
@@ -57,9 +52,8 @@ exports.config = {
                 // 'incognito',
                 // 'disable-extensions',
                 // 'show-fps-counter=true'
-                '--headless',
+                '--headless',            // Don't use headless for serenity, increases runtime for some reason
                 '--window-size=1920,1080',
-                // Required only when you are using chrome 58 or below
                 //'--disable-gpu',
                 // Without a remote debugging port, Google Chrome exits immediately.
                 //'--remote-debugging-port=9222',
