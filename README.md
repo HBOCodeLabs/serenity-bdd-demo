@@ -35,9 +35,7 @@ see also [serenity-js best practices](https://github.com/jan-molak/serenity-js/i
 * [Code completion](./documentation/code-completion.mov)
 * One-click code navagation
 
-<video width="320" height="240" controls>
-  <source src="./documentation/code-completion.mov" type="video/mp4">
-</video>
+[![Code Completion](http://img.youtube.com/vi/p9qOk7veKzY/0.jpg)](http://www.youtube.com/watch?v=p9qOk7veKzY "Typescrypt/Serenity Code Completion")
 
 ## Next Steps
 While Protractor works fine with Hadron and can even test devices (native) using [appium](http://appium.io/), it is optimized for Angular.
