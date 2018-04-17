@@ -3,7 +3,7 @@ import {Question, Target, Text} from 'serenity-js/lib/screenplay-protractor';
 
 import { by } from 'protractor';
 
-const CONTENT_XPATH = "(//a[contains(@class, 'class2') and contains(@class, 'class4')]//span";
+const CONTENT_XPATH = "(//a[contains(@class, 'class2') and contains(@class, 'class4')]//span/span/span";
 
 // TODO:  Provide autoUtils/Automation version of "by" locators
 // TODO: Find out what the business language to describe regions of the application is.
