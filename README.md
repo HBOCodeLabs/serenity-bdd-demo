@@ -36,6 +36,7 @@ see also [serenity-js best practices](https://github.com/jan-molak/serenity-js/i
 * One-click code navagation
 
 [![Code Completion](http://img.youtube.com/vi/p9qOk7veKzY/0.jpg)](http://www.youtube.com/watch?v=p9qOk7veKzY "Typescrypt/Serenity Code Completion")
+Follow the image link above for a quick demo of code completion options.
 
 ## Next Steps
 While Protractor works fine with Hadron and can even test devices (native) using [appium](http://appium.io/), it is optimized for Angular.
