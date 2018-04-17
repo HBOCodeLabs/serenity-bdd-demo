@@ -31,6 +31,14 @@ it works very effectively for non-web tests too! Those include tests that exerci
 see also [serenity-js best practices](https://github.com/jan-molak/serenity-js/issues/5)
 
 
+## IDE Bonus Features 
+* [Code completion](./documentation/code-completion.mov)
+* One-click code navagation
+
+<video width="320" height="240" controls>
+  <source src="./documentation/code-completion.mov" type="video/mp4">
+</video>
+
 ## Next Steps
 While Protractor works fine with Hadron and can even test devices (native) using [appium](http://appium.io/), it is optimized for Angular.
 By implementing our own extension/plugin that leverages Hadron's auto-utils/automation we can gain many of the same benefits.
