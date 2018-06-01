@@ -1,28 +1,24 @@
 # This Feature is too narrowly focused and can be generalized
 @brand_all @mobile @desktop
-Feature: Check out the offerings HBO provides
+Feature: Entering Activation Code for HBO Now Activation Client Enter Code
 
-  In order to find compelling content
+  In order to watch HBO NOW
   As a movie buff
   I want to see what HBO has to offer
 
-  Scenario Outline: Exploring More HBO Content - <category>
+  Scenario Outline: Exploring More HBO Content
     # The gherkin is where requirements in terms of business value are captured
     # Be careful not over-specify behavior here
     # gherkins are not meant to explore exhaustive edge cases
     # Nor are then meant to read like tests
-    Given that <cinephile>, an unregistered user, wants to explore <category>
-     When she looks for content starting with <alpha>
-     Then she should see content that starts with <alpha>
+
+    Given that John has retrieved an activation code
+    When he enters the activation code in a second screen
+    Then he should see the provider list
 
     Examples:
       |    cinephile      |    category   | alpha |
       | SportsEnthusiast  | Sports        |   R   |
-     #| ComedyBuff        | Comedy        |   D   |
-     #| Learner           | Documentaries |   E   |
-
-
-
 
 #@all @mobile @desktop  @guest @login
 #Feature:  Sign into HBO
