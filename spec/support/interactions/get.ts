@@ -1,5 +1,5 @@
 import { Interaction, UsesAbilities } from '@serenity-js/core/lib/screenplay';
-import { CallAnApi } from './CallAnApi';
+import {CallAnApi} from '../abilities/call_an_api';
 
 export class Get implements Interaction {
 
@@ -11,5 +11,5 @@ export class Get implements Interaction {
 
     constructor(private resource: string) { }
 
-    toString = () => '{0} execute a GET on resource ${this.resource}';
+    toString = () => `{0} execute a GET on resource ${this.resource}`;
 }

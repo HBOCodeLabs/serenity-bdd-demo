@@ -1,6 +1,9 @@
 import {Ability, UsesAbilities} from '@serenity-js/core/lib/screenplay';
 import axios, {AxiosInstance, AxiosRequestConfig, AxiosResponse} from 'axios';
 
+/**
+ * Call an Api is the ability to correspond with an Api by the npm package axios.
+ */
 export class CallAnApi implements Ability {
 
     private lastResponse: AxiosResponse;
@@ -78,5 +81,5 @@ export class CallAnApi implements Ability {
 
     constructor(private axiosInstance: AxiosInstance) {
     }
-}
 
+}
