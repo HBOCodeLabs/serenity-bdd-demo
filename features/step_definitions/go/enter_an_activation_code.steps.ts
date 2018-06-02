@@ -7,7 +7,7 @@ import {AskForALicensePlateCode} from '../../../spec/screenplay/tasks';
 
 export = function enterAnActivationCodeSteps() {
 
-    // let code;
+    let code;
 
     this.setDefaultTimeout(30 * 1000);  // The todomvc.com website can sometimes be a bit slow to load, so we tell
                                         // Cucumber to give it up to 30 seconds to get ready.
@@ -19,8 +19,9 @@ export = function enterAnActivationCodeSteps() {
     });
 
     this.When(/^he enters the activation code in a second screen$/, function() {
+        code = ResponseMessage();
         return this.stage.theActorInTheSpotlight().attemptsTo(
-            See.if(ResponseMessage(), hasDadJoke()),
+             See.if(code, hasDadJoke()),
         );
     });
 
