@@ -10,6 +10,7 @@ export class Actors implements Cast {
     actor(name: string): Actor {
         return Actor.named(name)
             .whoCan(CallAnApi.at(Properties.endPoint))
+            //.whoCan(CallAnApi.at(Properties.postEndpoint))
             .whoCan(BrowseTheWeb.using(protractor.browser));
     }
 }

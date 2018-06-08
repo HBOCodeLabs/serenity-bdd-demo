@@ -4,6 +4,7 @@ import {
     ResponseMessage,
 } from '../../../spec/screenplay/questions/response_message';
 import {AskForALicensePlateCode} from '../../../spec/screenplay/tasks';
+import {EnterLicensePlateCode} from '../../../spec/screenplay/tasks';
 
 export = function enterAnActivationCodeSteps() {
 
@@ -20,8 +21,9 @@ export = function enterAnActivationCodeSteps() {
 
     this.When(/^he enters the activation code in a second screen$/, function() {
         code = ResponseMessage();
+            
         return this.stage.theActorInTheSpotlight().attemptsTo(
-             See.if(code, hasDadJoke()),
+            EnterLicensePlateCode.called(code.data),
         );
     });
 

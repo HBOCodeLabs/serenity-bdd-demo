@@ -19,4 +19,6 @@ export class NavigationBar {
 
     // TODO: It's a navigation tool, but does it belong here?
     static Alphabet = Target.the('"{0}" side navigation link').located(by.xpath(ALPHA_XPATH + '[.="{0}"]'));
+
+    static Code = Target.the('Code').located(by.tagName('input'));
 }
