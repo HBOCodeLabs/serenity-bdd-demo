@@ -7,6 +7,4 @@ export const ResponseMessage = () => Question.about(`The Response Message`, acto
    CallAnApi.as(actor).getLastResponse() as PromiseLike<AxiosResponse>,
 );
 
-export const hasDadJoke = () => question => question.then(lastResponse => expect(lastResponse.data.joke).to.not.be.empty);
-
-export const hasDadJokeWithId = id => question => question.then(lastResponse => expect(lastResponse.data.id).to.equal(id));
+export const hasActivationCode = () => question => question.then(lastResponse => expect(lastResponse.data.activationCode).to.be.empty);
