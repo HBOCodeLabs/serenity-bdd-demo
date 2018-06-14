@@ -1,14 +1,10 @@
 import {See} from '@serenity-js/core/lib/screenplay';
-import {
-    hasActivationCode,
-    ResponseMessage,
-} from '../../../spec/screenplay/questions/response_message';
+import {expect} from '../../../spec/expect';
+import {ResponseMessage} from '../../../spec/screenplay/questions/response_message';
 import {AskForALicensePlateCode} from '../../../spec/screenplay/tasks';
 import {EnterLicensePlateCode} from '../../../spec/screenplay/tasks';
 
 export = function enterAnActivationCodeSteps() {
-
-    let code;
 
     this.setDefaultTimeout(30 * 1000);  // The todomvc.com website can sometimes be a bit slow to load, so we tell
                                         // Cucumber to give it up to 30 seconds to get ready.
@@ -20,11 +16,11 @@ export = function enterAnActivationCodeSteps() {
     });
 
     this.When(/^he enters the activation code in a second screen$/, function() {
-        code = ResponseMessage();
+
+        let response = ResponseMessage(this.stage.theActorInTheSpotlight());
 
         return this.stage.theActorInTheSpotlight().attemptsTo(
-            See.if(code, hasActivationCode()),
-            // EnterLicensePlateCode.called(code.data),
+            EnterLicensePlateCode.called(response.data.activationCode),
         );
     });
 

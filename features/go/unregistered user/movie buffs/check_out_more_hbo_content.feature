@@ -17,7 +17,7 @@ Feature: Check out the offerings HBO provides
 
     Examples:
       |    cinephile      |    category   | alpha |
-      | SportsEnthusiast  | Sports        |   R   |
+     #| SportsEnthusiast  | Sports        |   R   |
      #| ComedyBuff        | Comedy        |   D   |
      #| Learner           | Documentaries |   E   |
 

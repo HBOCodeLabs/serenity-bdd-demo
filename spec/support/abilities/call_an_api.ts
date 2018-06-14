@@ -79,13 +79,12 @@ export class CallAnApi implements Ability {
         );
     }
 
-    getLastResponse(): PromiseLike<AxiosResponse> {
+    //getLastResponse(): PromiseLike<AxiosResponse> {
+    getLastResponse(): AxiosResponse {    
 
-        // let p = Promise.resolve(this.lastResponse);
+        let p = Promise.resolve(this.lastResponse);
 
-        // p.then(value => console.log(value.request));
-
-        return Promise.resolve(this.lastResponse);
+        return this.lastResponse;
     }
 
     constructor(private axiosInstance: AxiosInstance) {

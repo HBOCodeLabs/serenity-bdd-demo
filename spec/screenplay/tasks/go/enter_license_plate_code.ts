@@ -1,5 +1,3 @@
-import {Get} from '../../../support/interactions/get';
-import {Post} from '../../../support/interactions/post';
 
 import { Open, PerformsTasks, step, Task, UseAngular } from 'serenity-js/lib/screenplay-protractor';     // imports the @step
 import { Click, Is, Wait, Duration, Enter, Text } from 'serenity-js/lib/serenity-protractor';
@@ -22,8 +20,8 @@ export class EnterLicensePlateCode implements Task {
             Open.browserOn('https://qa.activate.hbonow.com/?environment=snp'),
             
             Enter.theValue(this.licensePlate).into(NavigationBar.Code).thenHit(protractor.Key.ENTER),
-            
-            Wait.for(new Duration(10000)),
+
+            Wait.for(Duration.ofSeconds(10)),
 
             // Open "More" just in case link is hidden
             // Wait.until(NavigationBar.More_Categories, Is.clickable()),
